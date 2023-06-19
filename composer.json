@@ -1,0 +1,22 @@
+{
+    "name": "priana13/tanggal",
+    "description": "Helper Tanggal Php dalam bahasa Indonesia",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Priana13\\Tanggal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "priana13",
+            "email": "herian.sap@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "require-dev": {
+        
+    }
+}
