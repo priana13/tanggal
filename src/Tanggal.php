@@ -53,7 +53,7 @@ class Tanggal {
       /**
        * Bulan lalu tanggal yang sama dengan hari ini
        */
-      public function bulan_lalu(){
+      public static function bulan_lalu(){
 
         $tanggal = date('Y-m-d', strtotime(date('Y-m-d') . ' -1 month'));
 
