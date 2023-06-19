@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Priana13\\Tanggal\\": "src/"
+            "Tanggal\\": "src/"
         }
     },
     "authors": [
@@ -15,9 +15,7 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
-    "require-dev": {
-        
-        "phpunit/phpunit": "^8.3"
+    "require": {
+       
     }
 }

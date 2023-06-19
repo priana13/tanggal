@@ -1,5 +1,5 @@
 <?php 
-namespace Priana13\Tanggal;
+namespace Tanggal;
 
 class Tanggal {
 
@@ -38,6 +38,28 @@ class Tanggal {
          
       }
 
+      /**
+       * Bulan awal tanggal 1
+       */
+
+      public static function awal_bulan_lalu(){
+
+        $tanggal = date('Y-m-01', strtotime(date('Y-m-d') . ' -1 month'));
+
+        return $tanggal;
+
+      }
+
+      /**
+       * Bulan lalu tanggal yang sama dengan hari ini
+       */
+      public function bulan_lalu(){
+
+        $tanggal = date('Y-m-d', strtotime(date('Y-m-d') . ' -1 month'));
+
+        return $tanggal;
+        
+      }
 
 
 }

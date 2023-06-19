@@ -1,18 +1,13 @@
 <?php 
 
-use Priana13\Tanggal\Tanggal;
-use PHPUnit\Framework\TestCase;
+namespace Tanggal;
 
-// require '../src/Tanggal.php';
+require '../src/Tanggal.php';
 
-final class TanggalTest extends TestCase
-{
-    public function testTanggal()
-    {   
 
-        $date = Tanggal::hari_ini();
+$tanggal = new \Tanggal\Tanggal();
 
-        // $this->assertStatus(200);
-        
-    }
-}
+
+echo $tanggal->bulan_lalu();
+
+
