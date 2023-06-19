@@ -1,4 +1,5 @@
 <?php 
+namespace Priana13\Tanggal;
 
 class Tanggal {
 
