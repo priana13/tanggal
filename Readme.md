@@ -16,3 +16,6 @@ awal bulan di bulan lalu
 - bulan_lalu() 
 tanggal hari ini di kurang 1 bulan
 
+- list_tanggal($n)
+List tanggal beberapa hari yang lalu, $n merupakan parameter jumlah hari yang akan diambil
+
