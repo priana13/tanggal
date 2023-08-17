@@ -62,4 +62,24 @@ class Tanggal {
       }
 
 
+      /**
+       * List Tanggal beberapa hari ke belakang
+      */
+      public static function list_tanggal($n = 30): array
+      {
+
+        $jumlah_hari = $n; // Jumlah hari yang ingin ditampilkan
+        $tanggal_sekarang = date('Y-m-d'); // Tanggal hari ini       
+
+        for ($i = 0; $i < $jumlah_hari; $i++) {
+            $tanggal = date('Y-m-d', strtotime("-$i days", strtotime($tanggal_sekarang)));
+            $list_tanggal[] = $tanggal;
+            // echo "$tanggal<br>";
+        }
+
+        return $list_tanggal;
+
+      }
+
+
 }
