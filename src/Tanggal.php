@@ -81,5 +81,42 @@ class Tanggal {
 
       }
 
+/**
+ * Fungsi untuk mendapatkan daftar tanggal dalam satu bulan
+ * 
+ * @param int $bulan Bulan (1-12)
+ * @param int $tahun Tahun (opsional, default: tahun saat ini)
+ * @return array Daftar tanggal dalam format Y-m-d
+ */
+public static function list_tanggal_spesifik($bulan, $tahun = null) {
+
+  // Jika tahun tidak disediakan, gunakan tahun saat ini
+    if ($tahun === null) {
+        $tahun = date('Y');
+    }
+    
+    // Validasi parameter bulan
+    if (!is_numeric($bulan) || $bulan < 1 || $bulan > 12) {
+        return ['Error: Bulan harus angka antara 1-12'];
+    }
+    
+    // Mendapatkan jumlah hari dalam bulan tersebut
+    $jumlahHari = cal_days_in_month(CAL_GREGORIAN, $bulan, $tahun);
+    
+    // Array untuk menyimpan daftar tanggal
+    $daftarTanggal = [];
+    
+    // Generate tanggal untuk setiap hari dalam bulan
+    for ($hari = 1; $hari <= $jumlahHari; $hari++) {
+        // Format tanggal dengan leading zero jika diperlukan
+        $tanggal = sprintf('%04d-%02d-%02d', $tahun, $bulan, $hari);
+        $daftarTanggal[] = $tanggal;
+    }
+    
+    return $daftarTanggal;
+    
+  }
+    
+
 
 }
