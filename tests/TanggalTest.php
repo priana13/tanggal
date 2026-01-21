@@ -13,4 +13,4 @@ $bulan = new Bulan();
 
 // echo $tanggal->bulan_lalu();
 
-var_dump($bulan->list_bulan()) ;
+var_dump($tanggal->list_tanggal_spesifik(2,2026)) ;

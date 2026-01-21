@@ -101,7 +101,8 @@ public static function list_tanggal_spesifik($bulan, $tahun = null) {
     }
     
     // Mendapatkan jumlah hari dalam bulan tersebut
-    $jumlahHari = cal_days_in_month(CAL_GREGORIAN, $bulan, $tahun);
+    // $jumlahHari = cal_days_in_month(CAL_GREGORIAN, $bulan, $tahun);
+    $jumlahHari = (int) date('t', mktime(0, 0, 0, $bulan, 1, $tahun));
     
     // Array untuk menyimpan daftar tanggal
     $daftarTanggal = [];
